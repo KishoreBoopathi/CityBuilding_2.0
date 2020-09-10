@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6db7c914df2d96d4990c15161c67d02c, type: 3}
+  m_Name: Stone
+  m_EditorClassIdentifier: 
+  Name: Stone
+  icon: {fileID: 21300000, guid: 3a5155e3b5e175247b7196088b89894c, type: 3}
+  MinAmountToSpawn: 1
+  MaxAmountToSpawn: 5
+  MaxCountToStore: 30
