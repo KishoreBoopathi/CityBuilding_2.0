@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [Header("Player Stats")]
     public float WoodMod;
     public float StoneMod;
-    public float FishMod;
+    public float FoodMod;
     public float Harvesters;
     public Text Harv;
     [Header("Player Resources")]
@@ -39,12 +39,20 @@ public class GameManager : MonoBehaviour
             {
                 HPoint.Results();
                 HPoint.Harvested = false;
-                TurnEnded = false;
-                Harvesters++;
-                Harv.text = "Labor Left: " + Harvesters.ToString();
+                Harvesters++;              
                 UpdateRes();
             }
         }
+        foreach(Building Built in FindObjectsOfType<Building>())
+        {
+            if(Built.isBuilt == false)
+            {
+                Built.TTComplete -= 1;
+                Built.BUpdate();
+            }
+        }
+        Harv.text = "Labor Left: " + Harvesters.ToString();
+        TurnEnded = false;      
     }
 
     public void AddRes(string Res, int Amount)
@@ -73,7 +81,7 @@ public class GameManager : MonoBehaviour
                 TempMod = Mathf.RoundToInt(BGain * StoneMod);
                 break;
             case "Food":
-                TempMod = Mathf.RoundToInt(BGain * FishMod);
+                TempMod = Mathf.RoundToInt(BGain * FoodMod);
                 break;
         }
         //Debug.Log("Value Returned: " + TempMod + " from case Value: " + WRes);
@@ -104,6 +112,7 @@ public class GameManager : MonoBehaviour
         WText.text = "Wood: " + Wood.ToString();
         SText.text = "Stone: " + Stone.ToString();
     }
+
     //public void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.G))
