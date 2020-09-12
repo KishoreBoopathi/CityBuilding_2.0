@@ -28,6 +28,7 @@ public class CubePlacer : MonoBehaviour
         if (FindObjectOfType<GameManager>().CanPlace())
         {
             Instantiate(Prefab).transform.position = finalPosition;
+            Prefab = null;
         }
     }
 }

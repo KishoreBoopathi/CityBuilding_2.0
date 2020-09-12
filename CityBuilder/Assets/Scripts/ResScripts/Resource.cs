@@ -11,7 +11,6 @@ public class Resource : ScriptableObject
     public int MinAmountToSpawn;
     public int MaxAmountToSpawn;
     public int MaxCountToStore;
-
     public virtual void UseResource ()
     {
         //Usage of the resource

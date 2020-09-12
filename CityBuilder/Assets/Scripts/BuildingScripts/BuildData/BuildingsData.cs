@@ -10,4 +10,9 @@ public class BuildingsData : ScriptableObject
     [Header("Price")]
     public int StonePrice;
     public int WoodPrice;
+    [Header("Stats")]
+    public float WoodMod;
+    public float StoneMod;
+    public float FoodMod;
+    public int HarvMod;
 }
