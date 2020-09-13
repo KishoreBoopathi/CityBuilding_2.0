@@ -8,6 +8,7 @@ public class HarvestPoint : MonoBehaviour
     public int resLeft = 100;
     public string WhiRes;
     public bool Harvested = false;
+    public int HarvHere;
     GameManager GM;
     int TempAmount;
     private void Awake()
@@ -24,7 +25,8 @@ public class HarvestPoint : MonoBehaviour
         //Debug.Log("Mouse has clicked me: " + gameObject);
         if (GM.Harvesters > 0)
         {
-            GM.Harvesters -= 1;
+            GM.Harvesters--;
+            HarvHere++;
             GM.Harv.text = "Labor Left: " + GM.Harvesters.ToString();
             Harvested = true;
         }
@@ -37,6 +39,7 @@ public class HarvestPoint : MonoBehaviour
     {
         int ResGain = Random.Range(MyResource.MinAmountToSpawn, MyResource.MaxAmountToSpawn);
         TempAmount = GM.Modifiers(WhiRes, ResGain) + ResGain;
+        Debug.Log(TempAmount + " " + GM.Modifiers(WhiRes, ResGain));
         int hold = resLeft - TempAmount;
         if (hold >= 0)
         {
