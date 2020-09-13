@@ -1,4 +1,4 @@
-﻿ using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +17,8 @@ public class CubePlacer : MonoBehaviour
             RaycastHit hitInfo;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray, out hitInfo) && hitInfo.collider.tag != "Resource"){
+            if (Physics.Raycast(ray, out hitInfo) && hitInfo.collider.tag != "Resource")
+            {
                 PlaceCubeNear(hitInfo.point);
             }
         }
@@ -28,7 +29,10 @@ public class CubePlacer : MonoBehaviour
         if (FindObjectOfType<GameManager>().CanPlace())
         {
             Instantiate(Prefab).transform.position = finalPosition;
-            Prefab = null;
+            if(Input.GetKey(KeyCode.LeftShift) == false)
+            {
+                Prefab = null;
+            }           
         }
     }
 }
