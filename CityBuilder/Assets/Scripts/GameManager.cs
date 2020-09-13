@@ -37,22 +37,26 @@ public class GameManager : MonoBehaviour
         {
             if (HPoint.Harvested == true)
             {
-                HPoint.Results();
+                while (HPoint.HarvHere > 0)
+                {
+                    HPoint.Results();
+                    Harvesters++;
+                    HPoint.HarvHere--;
+                }
                 HPoint.Harvested = false;
-                Harvesters++;              
                 UpdateRes();
             }
         }
-        foreach(Building Built in FindObjectsOfType<Building>())
+        foreach (Building Built in FindObjectsOfType<Building>())
         {
-            if(Built.isBuilt == false)
+            if (Built.isBuilt == false)
             {
                 Built.TTComplete -= 1;
                 Built.BUpdate();
             }
         }
         Harv.text = "Labor Left: " + Harvesters.ToString();
-        TurnEnded = false;      
+        TurnEnded = false;
     }
 
     public void AddRes(string Res, int Amount)
@@ -68,7 +72,7 @@ public class GameManager : MonoBehaviour
             case "Food":
                 Food += Amount;
                 break;
-        }        
+        }
     }
     public int Modifiers(string WRes, int BGain)
     {
@@ -87,7 +91,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log("Value Returned: " + TempMod + " from case Value: " + WRes);
         return TempMod;
     }
-    public void TakeAway(int Ston,int Woo)
+    public void TakeAway(int Ston, int Woo)
     {
         //Only for test purpose to showcase amount being taken
         STake = Ston;
@@ -95,12 +99,12 @@ public class GameManager : MonoBehaviour
     }
     public bool CanPlace()
     {
-        if(Stone - STake >= 0 && Wood - WTake >= 0)
+        if (Stone - STake >= 0 && Wood - WTake >= 0)
         {
-             Stone -= STake;
-             Wood -= WTake;
-             UpdateRes();
-             return true;
+            Stone -= STake;
+            Wood -= WTake;
+            UpdateRes();
+            return true;
         }
         else
         {
@@ -123,7 +127,7 @@ public class GameManager : MonoBehaviour
     //        {
     //            BNum = 0;
     //        }
-          
+
     //        FindObjectOfType<CubePlacer>().Prefab = Buildings[BNum];
 
     //    }
