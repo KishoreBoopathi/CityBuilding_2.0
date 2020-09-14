@@ -132,4 +132,19 @@ public class GameManager : MonoBehaviour
 
     //    }
     //}
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        Wood = data.Wood;
+        Debug.Log(Wood);
+        Stone = data.Stone;
+        Food = data.Food;
+        Harvesters = data.Harvesters;
+    }
+
 }
+

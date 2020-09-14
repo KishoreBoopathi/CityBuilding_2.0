@@ -20,7 +20,7 @@ public class InventorySlot : MonoBehaviour
         resourceIcon.enabled = true;
         resourceCountImage.color = new Color(resourceCountImage.color.r, resourceCountImage.color.g, resourceCountImage.color.b, 1f);
         resourceCountText.color = new Color(resourceCountText.color.r, resourceCountText.color.g, resourceCountText.color.b, 1f);
-        removeButton.interactable = true;
+        //removeButton.interactable = true;
     }
 
     public void ClearSlot ()
@@ -31,7 +31,7 @@ public class InventorySlot : MonoBehaviour
         resourceIcon.enabled = false;
         resourceCountImage.color = new Color(resourceCountImage.color.r, resourceCountImage.color.g, resourceCountImage.color.b, 0f);
         resourceCountText.color = new Color(resourceCountText.color.r, resourceCountText.color.g, resourceCountText.color.b, 0f);
-        removeButton.interactable = false;
+        //removeButton.interactable = false;
     }
 
     public void OnRemoveButton()
