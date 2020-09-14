@@ -144,6 +144,7 @@ public class GameManager : MonoBehaviour
         Stone = data.Stone;
         Food = data.Food;
         Harvesters = data.Harvesters;
+        UpdateRes();
     }
 
 }

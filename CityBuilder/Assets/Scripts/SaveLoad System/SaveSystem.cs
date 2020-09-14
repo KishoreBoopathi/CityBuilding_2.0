@@ -27,6 +27,7 @@ public class SaveSystem
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
             //Debug.Log("Load!"+data.Wood);
+            
             return data;
 
         }
