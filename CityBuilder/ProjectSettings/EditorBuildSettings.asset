@@ -6,18 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 2cb0e65f1dbe9774484cbaaf8a20d118
+  - enabled: 1
     path: Assets/Scenes/Winter Biome.unity
     guid: 3c634cfc8aba5a94aa6ac4c6a598a654
   - enabled: 1
     path: Assets/Scenes/Yu Test.unity
     guid: 5aead144678e0e4429f5638a0592a989
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 2cb0e65f1dbe9774484cbaaf8a20d118
+    path: Assets/Scenes/Jungle Biome.unity
+    guid: 8fca726874e89f749bf279f7eab8518b
   - enabled: 1
     path: Assets/Scenes/Sky Island.unity
     guid: aaa9e810abab3ba40a7da161e805a951
   - enabled: 1
-    path: Assets/Scenes/Jungle Biome.unity
-    guid: 8fca726874e89f749bf279f7eab8518b
+    path: Assets/Scenes/Hero.unity
+    guid: bf1a1800053c98e4aa6799e8a725f44b
   m_configObjects: {}
