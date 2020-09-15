@@ -16,7 +16,24 @@ public class Building : MonoBehaviour
     }
 
     //OnMouseDown (Clicked) Display Selected Building and if can upgrade give option and required resources
-    //Each turn check if TTComplete == 0 if true Prefab = complete
+    public void OnMouseOver()
+    {
+        Debug.Log("Hello");
+    }
+    public void OnMouseDown()
+    {
+        BuildingInfo BI = FindObjectOfType<BuildingInfo>();
+        if (BI != null)
+        {
+            BI.Panel.SetActive(true);
+            BI.Building = gameObject;
+            BI.SetData();
+        }
+        else
+        {
+            Debug.Log("BI doesnt exist");
+        }
+    }
     //Upgrade Function if not max level allow upgrade show required Resources and Turns
     public void BUpdate()
     {
@@ -37,10 +54,7 @@ public class Building : MonoBehaviour
                 break;
             case "House":
                 GM.Harvesters += IncHarv;
-                break;
-            case "Food":
-                GM.FoodMod += Data.FoodMod;
-                break;
+                break;        
         }
        
     }

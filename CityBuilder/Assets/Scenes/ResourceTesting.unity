@@ -376,6 +376,7 @@ MonoBehaviour:
   resLeft: 100
   WhiRes: 0
   Harvested: 0
+  HarvHere: 0
 --- !u!65 &674333406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -444,7 +445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674333404}
   m_LocalRotation: {x: -0, y: -0, z: -0.7051661, w: 0.7090422}
-  m_LocalPosition: {x: -4.6, y: 0, z: 0}
+  m_LocalPosition: {x: -4.6099997, y: 2.73, z: 0}
   m_LocalScale: {x: 0.6638608, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -577,6 +578,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 693972641, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 936889086, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 52.56674
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887281958, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061621011845335230, guid: 795cfd0d1b3779947804c15b6045c834,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9076446297608692458, guid: 795cfd0d1b3779947804c15b6045c834,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,11 +725,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 448505761}
-    - target: {fileID: 9076446299365213933, guid: 795cfd0d1b3779947804c15b6045c834,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndTurn
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
 --- !u!1 &1402861402
@@ -750,6 +763,7 @@ MonoBehaviour:
   resLeft: 100
   WhiRes: 0
   Harvested: 0
+  HarvHere: 0
 --- !u!65 &1402861404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -818,7 +832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402861402}
   m_LocalRotation: {x: -0, y: -0, z: -0.7051661, w: 0.7090422}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: -1.01, y: 2.73, z: 0}
   m_LocalScale: {x: 1.5206891, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -860,6 +874,7 @@ MonoBehaviour:
   resLeft: 100
   WhiRes: 0
   Harvested: 0
+  HarvHere: 0
 --- !u!65 &1770313168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -928,7 +943,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770313166}
   m_LocalRotation: {x: -0, y: -0, z: -0.7051661, w: 0.7090422}
-  m_LocalPosition: {x: 2.804, y: 0.015, z: 0}
+  m_LocalPosition: {x: 2.794, y: 2.7450001, z: 0}
   m_LocalScale: {x: 3.3848, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
