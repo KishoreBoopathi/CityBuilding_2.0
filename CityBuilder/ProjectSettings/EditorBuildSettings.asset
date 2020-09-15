@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2cb0e65f1dbe9774484cbaaf8a20d118
+  - enabled: 1
+    path: Assets/Scenes/Sky Island.unity
+    guid: aaa9e810abab3ba40a7da161e805a951
+  - enabled: 1
+    path: Assets/Scenes/Jungle Biome.unity
+    guid: 8fca726874e89f749bf279f7eab8518b
   m_configObjects: {}
