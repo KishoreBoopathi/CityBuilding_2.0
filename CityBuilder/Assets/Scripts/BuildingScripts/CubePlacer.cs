@@ -7,20 +7,40 @@ public class CubePlacer : MonoBehaviour
     private Grid grid;
     public GameObject Prefab;
     public BuildingsData data;
+    public GameObject pgo = null;
     private void Awake()
     {
         grid = FindObjectOfType<Grid>();
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && data != null)
+        if(data)
         {
+            if(pgo == null)
+            {
+                pgo = Instantiate(data.Model);
+                pgo.layer = 2;
+            }
             RaycastHit hitInfo;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hitInfo) && hitInfo.collider.tag != "Resource")
+            if (Physics.Raycast(ray, out hitInfo))
             {
-                PlaceCubeNear(hitInfo.point);
+                if (hitInfo.collider.tag == "Resource" || hitInfo.collider.tag == "Building")
+                {
+                    pgo.transform.position = hitInfo.point;
+                    pgo.transform.Find("Body").GetComponent<Renderer>().material.color = Color.red;
+                }
+                else if(hitInfo.collider.tag == "Terrain")
+                {
+                    pgo.transform.position = hitInfo.point;
+                    pgo.transform.Find("Body").GetComponent<Renderer>().material.color = Color.gray;
+                                    
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        PlaceCubeNear(hitInfo.point);
+                    }
+                }
             }
         }
     }
@@ -43,6 +63,7 @@ public class CubePlacer : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift) == false)
             {
                 data = null;
+                Destroy(pgo);
             } 
         }
     }
