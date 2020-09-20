@@ -55,6 +55,8 @@ public class GameManager : MonoBehaviour
                 Built.BUpdate();
             }
         }
+        BuildingInfo BI = FindObjectOfType<BuildingInfo>();
+        BI.SetData();
         Harv.text = "Labor Left: " + Harvesters.ToString();
         TurnEnded = false;
     }
