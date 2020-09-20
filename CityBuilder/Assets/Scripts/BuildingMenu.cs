@@ -50,7 +50,7 @@ public class BuildingMenu : MonoBehaviour
     void SlotPressed(BuildingsData building)
     {
         Debug.Log("Building Name: " + building.Name);
-        FindObjectOfType<CubePlacer>().Prefab = building.Model;
+        FindObjectOfType<CubePlacer>().data = building;
         FindObjectOfType<GameManager>().TakeAway(building.StonePrice, building.WoodPrice);
     }
 

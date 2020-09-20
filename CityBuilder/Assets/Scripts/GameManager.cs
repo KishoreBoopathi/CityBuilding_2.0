@@ -24,11 +24,21 @@ public class GameManager : MonoBehaviour
     //public int BNum;
     public bool TurnEnded;
     int TempMod;
-
+    public struct bData
+    {
+        public string name;
+        public Vector3 pos;
+    }
+    List<bData> BuildingList;
+    List<bData> sBuildingList;
     public void Start()
     {
         UpdateRes();
         Harv.text = "Labor Left: " + Harvesters.ToString();
+        string path = Application.persistentDataPath + "/player.data";
+        Debug.Log(path);
+        BuildingList = new List<bData>();
+        sBuildingList = new List<bData>();
     }
     public void EndTurn()
     {
@@ -55,6 +65,9 @@ public class GameManager : MonoBehaviour
                 Built.BUpdate();
             }
         }
+        BuildingInfo BI = FindObjectOfType<BuildingInfo>();
+        if (BI != null) 
+            BI.SetData();
         Harv.text = "Labor Left: " + Harvesters.ToString();
         TurnEnded = false;
     }
@@ -135,9 +148,38 @@ public class GameManager : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
+        foreach (var item in BuildingList)
+        {
+            sBuildingList.Add(item);
+        }
     }
     public void LoadPlayer()
     {
+        List<GameObject> trash = new List<GameObject>();
+
+        GameObject objectList = GameObject.Find("ObjectList");
+        if (objectList != null)
+        {
+            foreach (Transform item in objectList.transform)
+            {
+                trash.Add(item.gameObject);
+            }
+        }
+        BuildingList.Clear();
+        BuildingMenu bm = FindObjectOfType<BuildingMenu>();
+        CubePlacer cp = FindObjectOfType<CubePlacer>();
+        foreach (var item in sBuildingList)
+        {
+            foreach (var i in bm.buildingsList)
+            {
+                if (i.Name == item.name)
+                {
+                    cp.PlaceCube(i, item.pos);
+                    break;
+                }
+            }
+        }
+
         PlayerData data = SaveSystem.LoadPlayer();
         Wood = data.Wood;
         Debug.Log(Wood);
@@ -145,6 +187,18 @@ public class GameManager : MonoBehaviour
         Food = data.Food;
         Harvesters = data.Harvesters;
         UpdateRes();
+        foreach (var item in trash)
+        {
+            Destroy(item);
+        }
+    }
+
+    public void AddnewBuilding(string name, Vector3 position)
+    {
+        bData data = new bData();
+        data.name = name;
+        data.pos = position;
+        BuildingList.Add(data);
     }
 
 }

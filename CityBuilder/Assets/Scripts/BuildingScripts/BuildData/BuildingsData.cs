@@ -7,6 +7,7 @@ public class BuildingsData : ScriptableObject
 {
     public string Name;
     public GameObject Model;
+    public string Description;
     [Header("Price")]
     public int StonePrice;
     public int WoodPrice;
