@@ -23,6 +23,7 @@ public class Building : MonoBehaviour
     public void OnMouseDown()
     {
         BuildingInfo BI = FindObjectOfType<BuildingInfo>();
+        if (BI == null) return;
         if (BI.Panel.activeSelf == false)
         {
             if (BI != null)

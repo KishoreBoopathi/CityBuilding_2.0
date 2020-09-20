@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Resource
   - Enemy
+  - Building
+  - Terrain
   layers:
   - Default
   - TransparentFX
