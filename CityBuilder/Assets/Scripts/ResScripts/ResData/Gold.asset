@@ -17,3 +17,5 @@ MonoBehaviour:
   MinAmountToSpawn: 1
   MaxAmountToSpawn: 3
   MaxCountToStore: 10
+  SpawnedAmount: 2
+  AmountInInventory: 0

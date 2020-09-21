@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.WSA.Input;
 
 [CreateAssetMenu(fileName = "New Resource", menuName = "New Resource")]
 public class Resource : ScriptableObject
@@ -11,6 +12,10 @@ public class Resource : ScriptableObject
     public int MinAmountToSpawn;
     public int MaxAmountToSpawn;
     public int MaxCountToStore;
+
+
+    public int SpawnedAmount;
+    public int AmountInInventory;
     public virtual void UseResource ()
     {
         //Usage of the resource

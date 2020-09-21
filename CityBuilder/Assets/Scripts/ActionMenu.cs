@@ -29,4 +29,17 @@ public class ActionMenu : MonoBehaviour
             }
         }
     }
+
+    public void OnPressedCraftingButton()
+    {
+        this.gameObject.SetActive(false);
+        foreach(GameObject menu in Actions)
+        {
+            if(menu.name.Equals("Crafting Menu"))
+            {
+                menu.SetActive(true);
+                return;
+            }
+        }
+    }
 }

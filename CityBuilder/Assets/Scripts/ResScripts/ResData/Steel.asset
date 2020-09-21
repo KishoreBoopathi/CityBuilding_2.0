@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6db7c914df2d96d4990c15161c67d02c, type: 3}
-  m_Name: Fish
+  m_Name: Steel
   m_EditorClassIdentifier: 
-  Name: Fish
-  icon: {fileID: 243394597934715516, guid: 78058f6cf10afc64fa27ba7f70070412, type: 3}
-  MinAmountToSpawn: 1
-  MaxAmountToSpawn: 5
-  MaxCountToStore: 30
-  SpawnedAmount: 4
+  Name: Steel
+  icon: {fileID: 2834120790570517463, guid: 78058f6cf10afc64fa27ba7f70070412, type: 3}
+  MinAmountToSpawn: 0
+  MaxAmountToSpawn: 0
+  MaxCountToStore: 20
+  SpawnedAmount: 0
   AmountInInventory: 0

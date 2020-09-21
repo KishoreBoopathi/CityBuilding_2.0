@@ -11,7 +11,7 @@ public class ResourcePickup : MonoBehaviour
 
     void PickUp()
     {
-        Debug.Log("Picked up " + resource.Name);
+        Debug.Log("Picked up " + resource.SpawnedAmount + " " + resource.Name);
         bool isAddedToInventory = Inventory.instance.Add(resource);
         if(isAddedToInventory)
         {

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e5e4e9cb8d7454ba525f87cd8f36d1, type: 3}
+  m_Name: Armor
+  m_EditorClassIdentifier: 
+  Name: Steel
+  Materials:
+  - resource: {fileID: 11400000, guid: 649b6115b6a153a469828812b613c586, type: 2}
+    amount: 1
+  - resource: {fileID: 11400000, guid: 91c7945b36b73bf4fa7b91bb958819af, type: 2}
+    amount: 3
+  CraftedResource:
+    resource: {fileID: 11400000, guid: 2fc8ee2cade197d4ab7d61b7900a0b73, type: 2}
+    amount: 1

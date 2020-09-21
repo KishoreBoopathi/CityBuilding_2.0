@@ -15,5 +15,7 @@ MonoBehaviour:
   Name: Wood
   icon: {fileID: 0}
   MinAmountToSpawn: 1
-  MaxAmountToSpawn: 5
+  MaxAmountToSpawn: 10
   MaxCountToStore: 30
+  SpawnedAmount: 7
+  AmountInInventory: 0
