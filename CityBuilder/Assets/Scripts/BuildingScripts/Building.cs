@@ -23,15 +23,28 @@ public class Building : MonoBehaviour
     public void OnMouseDown()
     {
         BuildingInfo BI = FindObjectOfType<BuildingInfo>();
-        if (BI != null)
+        if (BI == null) return;
+        if (BI.Panel.activeSelf == false)
         {
-            BI.Panel.SetActive(true);
-            BI.Building = gameObject;
-            BI.SetData();
+            if (BI != null)
+            {
+                BI.Panel.SetActive(true);
+                BI.Building = gameObject;
+                BI.SetData();
+            }
+            else
+            {
+                Debug.Log("BI doesnt exist");
+            }
         }
-        else
+        else 
         {
-            Debug.Log("BI doesnt exist");
+            if (BI.Building != gameObject)
+            {
+                BI.Resource = null;
+                BI.Building = gameObject;
+                BI.SetData();
+            }
         }
     }
     //Upgrade Function if not max level allow upgrade show required Resources and Turns

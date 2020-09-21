@@ -19,6 +19,7 @@ public class SaveSystem
     public static PlayerData LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player.data";
+        Debug.Log(path);
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

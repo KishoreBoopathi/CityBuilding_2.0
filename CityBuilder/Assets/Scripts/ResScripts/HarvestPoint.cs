@@ -23,16 +23,42 @@ public class HarvestPoint : MonoBehaviour
     public void OnMouseDown()
     {
         //Debug.Log("Mouse has clicked me: " + gameObject);
-        if (GM.Harvesters > 0)
+        BuildingInfo BI = FindObjectOfType<BuildingInfo>();
+        if (BI.Panel.activeSelf == false)
         {
-            GM.Harvesters--;
-            HarvHere++;
-            GM.Harv.text = "Labor Left: " + GM.Harvesters.ToString();
-            Harvested = true;
+            if (BI != null)
+            {
+                BI.Panel.SetActive(true);
+                BI.Resource = gameObject;
+                BI.SetData();
+            }
+            else
+            {
+                Debug.Log("BI doesnt exist");
+            }
         }
         else
         {
-            Debug.LogError("Error cannot harvest this resource not enough Harvestors");
+            if (BI.Resource != gameObject)
+            {
+                BI.Building = null;
+                BI.Resource = gameObject;
+                BI.SetData();
+            }
+            else
+            {
+                if (GM.Harvesters > 0)
+                {
+                    GM.Harvesters--;
+                    HarvHere++;
+                    GM.Harv.text = "Labor Left: " + GM.Harvesters.ToString();
+                    Harvested = true;
+                }
+                else
+                {
+                    Debug.LogError("Error cannot harvest this resource not enough Harvestors");
+                }
+            }
         }
     }
     public void Results()
