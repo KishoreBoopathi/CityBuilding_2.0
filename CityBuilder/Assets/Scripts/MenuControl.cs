@@ -34,8 +34,8 @@ public class MenuControl : MonoBehaviour
     public void Quit()
     {
         
-        UnityEditor.EditorApplication.isPlaying = false;
-        /*Application.Quit();*/
+        //UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
     public void Back()
     {
