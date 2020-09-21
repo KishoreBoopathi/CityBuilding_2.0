@@ -52,6 +52,7 @@ public class HarvestPoint : MonoBehaviour
                     GM.Harvesters--;
                     HarvHere++;
                     GM.Harv.text = "Labor Left: " + GM.Harvesters.ToString();
+                    BI.HarvInc();
                     Harvested = true;
                 }
                 else
