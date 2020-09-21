@@ -16,4 +16,5 @@ public class BuildingsData : ScriptableObject
     public float StoneMod;
     public float FoodMod;
     public int HarvMod;
+    public int Allies;
 }

@@ -67,7 +67,19 @@ public class Building : MonoBehaviour
                 break;
             case "House":
                 GM.Harvesters += IncHarv;
-                break;        
+                break;
+            case "Hybrid":
+                GM.WoodMod += Data.WoodMod;
+                GM.StoneMod += Data.StoneMod;
+                
+                break;
+            case "Barracks":
+                if (!(GM.Allies > 2))
+                {
+                   
+                    GM.Allies += Data.Allies;
+                }
+                break;
         }
        
     }

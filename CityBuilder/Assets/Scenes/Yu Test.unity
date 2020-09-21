@@ -469,6 +469,23 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4920474778395829917, guid: 90745861bd70f5048b317c7b0cc4bc38,
+        type: 3}
+      propertyPath: buildingsList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920474778395829917, guid: 90745861bd70f5048b317c7b0cc4bc38,
+        type: 3}
+      propertyPath: buildingsList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 91750ded84e7f37439db393257e129c8,
+        type: 2}
+    - target: {fileID: 4920474778395829917, guid: 90745861bd70f5048b317c7b0cc4bc38,
+        type: 3}
+      propertyPath: buildingsList.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: fb989e2e2cdcc8f4b9772344bbc5b2d5,
+        type: 2}
     - target: {fileID: 4920474778482681102, guid: 90745861bd70f5048b317c7b0cc4bc38,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -3559,6 +3576,7 @@ MonoBehaviour:
   Stone: 100
   SText: {fileID: 399321747}
   Food: 0
+  Allies: 0
   STake: 0
   WTake: 0
   TurnEnded: 0

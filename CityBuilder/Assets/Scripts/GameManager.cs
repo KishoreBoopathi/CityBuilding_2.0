@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int Stone;
     public Text SText;
     public int Food;
+    public int Allies;
     [Header("ToTake")]
     public int STake;
     public int WTake;

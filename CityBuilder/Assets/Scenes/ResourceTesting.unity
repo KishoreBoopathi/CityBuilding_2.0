@@ -244,6 +244,7 @@ MonoBehaviour:
   Stone: 0
   SText: {fileID: 1890111695}
   Food: 0
+  Allies: 0
   STake: 0
   WTake: 0
   TurnEnded: 0
@@ -274,6 +275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 0}
+  data: {fileID: 0}
+  pgo: {fileID: 0}
 --- !u!1 &618450193
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +481,7 @@ GameObject:
   - component: {fileID: 1132400250}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -586,6 +589,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 34.4
       objectReference: {fileID: 0}
+    - target: {fileID: 947427031, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1242512449, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -630,6 +637,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9076446297428496366, guid: 795cfd0d1b3779947804c15b6045c834,
+        type: 3}
+      propertyPath: Building
+      value: 
+      objectReference: {fileID: 11400000, guid: 91750ded84e7f37439db393257e129c8,
+        type: 2}
     - target: {fileID: 9076446297608692458, guid: 795cfd0d1b3779947804c15b6045c834,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -740,6 +753,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9076446298235458713, guid: 795cfd0d1b3779947804c15b6045c834,
+        type: 3}
+      propertyPath: Building
+      value: 
+      objectReference: {fileID: 11400000, guid: fb989e2e2cdcc8f4b9772344bbc5b2d5,
+        type: 2}
     - target: {fileID: 9076446298451242287, guid: 795cfd0d1b3779947804c15b6045c834,
         type: 3}
       propertyPath: m_SizeDelta.x

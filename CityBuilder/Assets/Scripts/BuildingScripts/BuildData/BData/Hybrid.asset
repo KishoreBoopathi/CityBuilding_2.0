@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d804c19cf332e49ba6e086190d86a3, type: 3}
+  m_Name: Hybrid
+  m_EditorClassIdentifier: 
+  Name: Hybrid
+  Model: {fileID: 7019920579087886288, guid: ebb65181c545adf40a568340080ac8b4, type: 3}
+  Description: Buildings that gives two resources
+  StonePrice: 3
+  WoodPrice: 4
+  WoodMod: 2
+  StoneMod: 2
+  FoodMod: 0
+  HarvMod: 0
+  Allies: 0
