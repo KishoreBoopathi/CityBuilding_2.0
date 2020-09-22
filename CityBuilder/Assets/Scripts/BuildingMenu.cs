@@ -51,13 +51,15 @@ public class BuildingMenu : MonoBehaviour
     {
         Debug.Log("Building Name: " + building.Name);
         FindObjectOfType<CubePlacer>().data = building;
+        FindObjectOfType<CubePlacer>().pgo = Instantiate(building.Model);
         FindObjectOfType<GameManager>().TakeAway(building.StonePrice, building.WoodPrice);
     }
 
     public void OnBackButtonPressed()
     {
-        this.gameObject.SetActive(false);
+        FindObjectOfType<CubePlacer>().data = null;
+        Destroy(FindObjectOfType<CubePlacer>().pgo);
+        gameObject.SetActive(false);
         mainMenu.SetActive(true);
-
     }
 }

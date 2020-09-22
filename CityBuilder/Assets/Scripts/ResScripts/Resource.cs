@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.WSA.Input;
 
 [CreateAssetMenu(fileName = "New Resource", menuName = "New Resource")]
 public class Resource : ScriptableObject
