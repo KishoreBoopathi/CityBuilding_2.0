@@ -57,6 +57,7 @@ public class CubePlacer : MonoBehaviour
             GameObject temp = Instantiate(data.Model);
             temp.transform.position = finalPosition;
             temp.transform.SetParent(objectList.transform);
+            temp.tag = "Building";
             GameManager gm = FindObjectOfType<GameManager>();
             gm.AddnewBuilding(data.Name, finalPosition);
 

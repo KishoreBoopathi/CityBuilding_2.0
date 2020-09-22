@@ -22,28 +22,31 @@ public class Building : MonoBehaviour
     }
     public void OnMouseDown()
     {
-        BuildingInfo BI = FindObjectOfType<BuildingInfo>();
-        if (BI == null) return;
-        if (BI.Panel.activeSelf == false)
+        if (gameObject.tag == "Building")
         {
-            if (BI != null)
+            BuildingInfo BI = FindObjectOfType<BuildingInfo>();
+            if (BI == null) return;
+            if (BI.Panel.activeSelf == false)
             {
-                BI.Panel.SetActive(true);
-                BI.Building = gameObject;
-                BI.SetData();
+                if (BI != null)
+                {
+                    BI.Panel.SetActive(true);
+                    BI.Building = gameObject;
+                    BI.SetData();
+                }
+                else
+                {
+                    Debug.Log("BI doesnt exist");
+                }
             }
             else
             {
-                Debug.Log("BI doesnt exist");
-            }
-        }
-        else 
-        {
-            if (BI.Building != gameObject)
-            {
-                BI.Resource = null;
-                BI.Building = gameObject;
-                BI.SetData();
+                if (BI.Building != gameObject)
+                {
+                    BI.Resource = null;
+                    BI.Building = gameObject;
+                    BI.SetData();
+                }
             }
         }
     }
