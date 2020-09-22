@@ -39,6 +39,7 @@ public class CubePlacer : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         PlaceCubeNear(hitInfo.point);
+                        GetComponent<AudioSource>().Play();
                     }
                 }
             }
