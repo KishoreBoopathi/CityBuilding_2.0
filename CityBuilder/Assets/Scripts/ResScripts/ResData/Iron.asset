@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Iron
   m_EditorClassIdentifier: 
   Name: Iron
-  icon: {fileID: 5105702843800358713, guid: 78058f6cf10afc64fa27ba7f70070412, type: 3}
+  icon: {fileID: 21300000, guid: 9e3850ff9c22c0949954069e855a2a44, type: 3}
   MinAmountToSpawn: 1
   MaxAmountToSpawn: 7
   MaxCountToStore: 20
   SpawnedAmount: 5
-  AmountInInventory: 15
+  AmountInInventory: 5

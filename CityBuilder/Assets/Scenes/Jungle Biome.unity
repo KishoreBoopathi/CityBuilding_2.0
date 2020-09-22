@@ -953,11 +953,6 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 278608339}
-    - target: {fileID: 170551192560709075, guid: bdd0458deeb275e44835f5e33a223a80,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: UpdateSound
-      objectReference: {fileID: 0}
     - target: {fileID: 385524400659464657, guid: bdd0458deeb275e44835f5e33a223a80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1063,15 +1058,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 385524400659464659, guid: bdd0458deeb275e44835f5e33a223a80,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 385524400659464661, guid: bdd0458deeb275e44835f5e33a223a80,
         type: 3}
       propertyPath: m_Name
       value: PauseMenuCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 385524400659464661, guid: bdd0458deeb275e44835f5e33a223a80,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd0458deeb275e44835f5e33a223a80, type: 3}
