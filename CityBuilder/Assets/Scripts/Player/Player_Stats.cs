@@ -6,6 +6,7 @@ public class Player_Stats : MonoBehaviour
 {
     [Header("Player Stats")]
     public int Str;
+    public List<GameObject> Equipment;
     // Start is called before the first frame update
     void Start()
     {

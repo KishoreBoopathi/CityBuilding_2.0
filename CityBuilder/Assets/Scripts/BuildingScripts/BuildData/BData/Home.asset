@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Home
   m_EditorClassIdentifier: 
   Name: House
-  Model: {fileID: 7392826293301394389, guid: 732dd3791b9b90743b7bc46f16898de5, type: 3}
+  Model: {fileID: 5179435346823250175, guid: bedfd689344c6e14fb6f43a5d4dbed9b, type: 3}
   Description: Small sturdy building where candy people reside. Gives one Harvester.
   StonePrice: 1
   WoodPrice: 2
@@ -21,3 +21,4 @@ MonoBehaviour:
   StoneMod: 0
   FoodMod: 0
   HarvMod: 1
+  Allies: 0
