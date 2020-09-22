@@ -28,6 +28,7 @@ public class BuildingMenu : MonoBehaviour
             actionSlot = Instantiate(actionButton, transform);
             actionSlot.transform.GetChild(0).GetComponent<Image>().sprite = buildingsList[i].Model.GetComponent<Image>().sprite;
             actionSlot.transform.GetChild(1).GetComponent<Text>().text = buildingsList[i].Name;
+            actionSlot.transform.GetChild(2).GetComponent<Text>().text = buildingsList[i].Description;
 
             /*actionSlot.GetComponent<Button>().onClick.AddListener(delegate ()
             {
