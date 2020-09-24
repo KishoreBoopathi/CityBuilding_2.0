@@ -132,6 +132,10 @@ MonoBehaviour:
   Data: {fileID: 11400000, guid: c0498b89c54ad1041b3c78376ae1cb9f, type: 2}
   TTComplete: 1
   isBuilt: 0
+  renderer: {fileID: 7885411276610133853}
+  T_normal: {fileID: 0}
+  T_error: {fileID: -6302665374080048711, guid: 6104373a87a0dc04eab4a44c84a9c865,
+    type: 2}
 --- !u!65 &229119007848616228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -258,6 +262,12 @@ PrefabInstance:
 --- !u!4 &4830414148648049042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 474d061d81e84c449822f60728e668b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 464892061249286792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7885411276610133853 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1504981713932161579, guid: 474d061d81e84c449822f60728e668b2,
     type: 3}
   m_PrefabInstance: {fileID: 464892061249286792}
   m_PrefabAsset: {fileID: 0}

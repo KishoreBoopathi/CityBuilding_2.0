@@ -42,8 +42,8 @@ public class AudioManager : MonoBehaviour
 
     public void SaveSoundSettings()
     {
-        PlayerPrefs.SetFloat(BackgroundPref, backgroundSlider.value);
-        PlayerPrefs.SetFloat(SoundEffectPref, soundEffectSlider.value);
+        //PlayerPrefs.SetFloat(BackgroundPref, backgroundSlider.value);
+        //PlayerPrefs.SetFloat(SoundEffectPref, soundEffectSlider.value);
     }
   
     void OnApplicationFocus(bool inFocus)

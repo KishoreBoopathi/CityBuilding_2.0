@@ -29,17 +29,19 @@ public class CubePlacer : MonoBehaviour
                 if (hitInfo.collider.tag == "Resource" || hitInfo.collider.tag == "Building")
                 {
                     pgo.transform.position = hitInfo.point;
-                    pgo.transform.Find("Body").GetComponent<Renderer>().material.color = Color.red;
+                    pgo.GetComponent<Building>().ChangeTexError();
+                    //pgo.transform.Find("Body").GetComponent<Renderer>().material.color = Color.red;
                 }
                 else if(hitInfo.collider.tag == "Terrain")
                 {
                     pgo.transform.position = hitInfo.point;
-                    pgo.transform.Find("Body").GetComponent<Renderer>().material.color = Color.gray;
+                    pgo.GetComponent<Building>().ChangeTexNormal();
+                    //pgo.transform.Find("Body").GetComponent<Renderer>().material.color = Color.gray;
                                     
                     if (Input.GetMouseButtonDown(0))
                     {
                         PlaceCubeNear(hitInfo.point);
-                        GetComponent<AudioSource>().Play();
+                        //GetComponent<AudioSource>().Play();
                     }
                 }
             }

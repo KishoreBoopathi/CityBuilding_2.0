@@ -6,13 +6,19 @@ public class Building : MonoBehaviour
 {
     public BuildingsData Data;
     public int TTComplete;
-    public bool isBuilt;    
+    public bool isBuilt;
+    public Renderer renderer;
+    public Texture T_normal, T_error;
     GameManager GM;
     void Start()
     {
         isBuilt = false;
         //On spawn Reference Player Stats. Increase Yield Modifier or Increase Harvestors.
-        GM = FindObjectOfType<GameManager>();       
+        GM = FindObjectOfType<GameManager>();
+        if (renderer)
+            T_normal = renderer.material.GetTexture("_MainTex");
+        else
+            Debug.LogError(gameObject.name + " require renderer for script");
     }
 
     //OnMouseDown (Clicked) Display Selected Building and if can upgrade give option and required resources
@@ -85,5 +91,16 @@ public class Building : MonoBehaviour
                 break;
         }
        
+    }
+
+    public void ChangeTexNormal()
+    {
+        if (renderer)
+            renderer.material.SetTexture("_MainTex", T_normal);
+    }
+    public void ChangeTexError()
+    {
+        if (renderer)
+            renderer.material.SetTexture("_MainTex", T_error);
     }
 }
