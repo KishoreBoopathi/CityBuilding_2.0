@@ -85,8 +85,8 @@ public class Building : MonoBehaviour
             case "Barracks":
                 if (!(GM.Allies > 2))
                 {
-                   
                     GM.Allies += Data.Allies;
+                    Debug.Log(GM.Allies);
                 }
                 break;
         }

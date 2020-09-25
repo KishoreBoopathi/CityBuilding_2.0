@@ -5,22 +5,36 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float health;
-    float currentHealth;
+    public float currentHealth;
     public GameObject[] Items;
     int rand;
+    bool isPlayer;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = health;
+        if(gameObject.tag == "Player")
+        {
+            isPlayer = true;
+        }
+        else
+        {
+            isPlayer = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isPlayer)
         {
-            TakeDamage(20);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                TakeDamage(20);
+            }
         }
+        
+        
     }
 
     public void TakeDamage(float damage)
@@ -38,6 +52,11 @@ public class Health : MonoBehaviour
             {
                 Debug.Log("Player is dead");
                 ItemDrop();
+            }
+            if (gameObject.tag == "Ally")
+            {
+                Debug.Log("Ally is dead");
+                gameObject.GetComponent<Movement>().enabled = false;
             }
         }
     }

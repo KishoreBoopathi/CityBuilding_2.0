@@ -31,7 +31,7 @@ public class BuildingPlacement : MonoBehaviour
         }
     }
     public void SetItem(GameObject building) {
-        currentBuilding = (Instantiate(building, new Vector3(0, 0, 0), Quaternion.identity)).transform;
+        currentBuilding = (Instantiate(building, new Vector3(0, 1, 0), Quaternion.identity)).transform;
         GetComponent<Camera>().transform.position = new Vector3(0, GetComponent<Camera>().transform.position.y, -30);
 
     }
