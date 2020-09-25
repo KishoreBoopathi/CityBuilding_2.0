@@ -44,7 +44,7 @@ public class AllyAI : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Damage To Enemy Here");
+            collision.gameObject.GetComponent<Health>().TakeDamage(10);
         }
         if(collision.gameObject.tag == "Player")
         {

@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         public string name;
         public Vector3 pos;
     }
-    List<bData> BuildingList;
+    public List<bData> BuildingList;
     List<bData> sBuildingList;
     public void Start()
     {
@@ -149,10 +149,7 @@ public class GameManager : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
-        foreach (var item in BuildingList)
-        {
-            sBuildingList.Add(item);
-        }
+       
     }
     public void LoadPlayer()
     {
