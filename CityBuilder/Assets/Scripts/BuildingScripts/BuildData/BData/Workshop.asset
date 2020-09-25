@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Workshop
   m_EditorClassIdentifier: 
   Name: Workshop
-  Model: {fileID: 5877000510108461487, guid: 582a50ef1513a8d41b75c8e2c6ae4362, type: 3}
+  Model: {fileID: 5895124805667384308, guid: 8dbb138957f053f49a15a728fa3bac87, type: 3}
   Description: Building used mainly for refining wood. Increase wood yield by 20%.
   StonePrice: 4
   WoodPrice: 5
@@ -21,3 +21,4 @@ MonoBehaviour:
   StoneMod: 0
   FoodMod: 0
   HarvMod: 0
+  Allies: 0
