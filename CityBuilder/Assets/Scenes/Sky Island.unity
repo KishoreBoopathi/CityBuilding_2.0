@@ -5173,6 +5173,22 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1407484464, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1513328792}
+    - target: {fileID: 1407484464, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626768402, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1513328792}
+    - target: {fileID: 1626768402, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SavePlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 1887281958, guid: 795cfd0d1b3779947804c15b6045c834, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -6063,6 +6079,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88797d44a0b8cdf4b95b45ab1ac8100a, type: 3}
+--- !u!114 &1513328792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4046382633152088092, guid: 88797d44a0b8cdf4b95b45ab1ac8100a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1513328791}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0a96bf2f5cd29649bbf41a4da9daf4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1601794046
 PrefabInstance:
   m_ObjectHideFlags: 0
