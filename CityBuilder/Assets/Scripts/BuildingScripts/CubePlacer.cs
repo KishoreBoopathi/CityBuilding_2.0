@@ -14,9 +14,9 @@ public class CubePlacer : MonoBehaviour
     }
     private void Update()
     {
-        if(data)
+        if (data)
         {
-            if(pgo == null)
+            if (pgo == null)
             {
                 pgo = Instantiate(data.Model);
                 pgo.layer = 2;
@@ -28,16 +28,18 @@ public class CubePlacer : MonoBehaviour
             {
                 if (hitInfo.collider.tag == "Resource" || hitInfo.collider.tag == "Building")
                 {
+
                     pgo.transform.position = hitInfo.point;
                     pgo.GetComponent<Building>().ChangeTexError();
+
                     //pgo.transform.Find("Body").GetComponent<Renderer>().material.color = Color.red;
                 }
-                else if(hitInfo.collider.tag == "Terrain")
+                else if (hitInfo.collider.tag == "Terrain")
                 {
                     pgo.transform.position = hitInfo.point;
                     pgo.GetComponent<Building>().ChangeTexNormal();
                     //pgo.transform.Find("Body").GetComponent<Renderer>().material.color = Color.gray;
-                                    
+
                     if (Input.GetMouseButtonDown(0))
                     {
                         PlaceCubeNear(hitInfo.point);
@@ -68,7 +70,7 @@ public class CubePlacer : MonoBehaviour
             {
                 data = null;
                 Destroy(pgo);
-            } 
+            }
         }
     }
 

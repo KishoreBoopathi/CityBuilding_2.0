@@ -10,6 +10,7 @@ TagManager:
   - Terrain
   - Rooms
   - SpawnPoint
+  - Dungeon
   layers:
   - Default
   - TransparentFX

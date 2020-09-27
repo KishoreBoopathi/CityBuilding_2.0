@@ -44,7 +44,7 @@ public class BuildingInfo : MonoBehaviour
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit ))
             {
                 //Debug.Log("Hit something");
-                Debug.Log("hit" + hit.collider.gameObject.name);
+                Debug.Log("hit " + hit.collider.gameObject.name);
             }
             else
             {
