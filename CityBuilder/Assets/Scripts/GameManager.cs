@@ -33,8 +33,9 @@ public class GameManager : MonoBehaviour
     }
     public List<bData> BuildingList;
     List<bData> sBuildingList;
-    public void UpdateResource()
+    public void Start()
     {
+        TextValues();
         UpdateRes();
         Harv.text = "Labor Left: " + Harvesters.ToString();
         string path = Application.persistentDataPath + "/player.data";
@@ -60,7 +61,7 @@ public class GameManager : MonoBehaviour
                     HPoint.HarvHere--;
                 }
                 HPoint.Harvested = false;
-                UpdateRes();
+                TextValues();
             }
         }
         foreach (Building Built in FindObjectsOfType<Building>())
@@ -74,6 +75,7 @@ public class GameManager : MonoBehaviour
         BuildingInfo BI = FindObjectOfType<BuildingInfo>();
         if (BI != null) 
             BI.SetData();
+
         Harv.text = "Labor Left: " + Harvesters.ToString();
         TurnEnded = false;
     }
@@ -153,7 +155,11 @@ public class GameManager : MonoBehaviour
     //}
     public void SavePlayer()
     {
-        SaveSystem.SavePlayer(this);      
+        SaveSystem.SavePlayer(this);
+        foreach (var item in BuildingList)
+        {
+            sBuildingList.Add(item);
+        }
     }
     public void LoadPlayer()
     {
@@ -203,7 +209,7 @@ public class GameManager : MonoBehaviour
         BuildingList.Add(data);
     }
 
-    public void Update()
+    public void TextValues()
     {
         if (WText == null)
         {
@@ -216,8 +222,8 @@ public class GameManager : MonoBehaviour
         if (Harv == null)
         {
             Harv = GameObject.Find("HarvestorText").GetComponent<Text>();
-            UpdateResource();
         }
+        UpdateRes();
     }
 }
 
