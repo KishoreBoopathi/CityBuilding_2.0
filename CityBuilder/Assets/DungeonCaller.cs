@@ -13,6 +13,7 @@ public class DungeonCaller : MonoBehaviour
     {
         Debug.Log("Dungeon");
         FindObjectOfType<Player_Stats>().BDungeon = SceneManager.GetActiveScene().buildIndex;
+        FindObjectOfType<GameManager>().SavePlayer();
         SceneManager.LoadScene("Hero");
     }
 }
