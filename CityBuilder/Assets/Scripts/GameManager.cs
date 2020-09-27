@@ -38,10 +38,10 @@ public class GameManager : MonoBehaviour
         TextValues();
         UpdateRes();
         Harv.text = "Labor Left: " + Harvesters.ToString();
-        //string path = Application.persistentDataPath + "/player.data";
-        //Debug.Log(path);
-        //BuildingList = new List<bData>();
-        //sBuildingList = new List<bData>();
+        string path = Application.persistentDataPath + "/player.data";
+        Debug.Log(path);
+        BuildingList = new List<bData>();
+        sBuildingList = new List<bData>();
 
         //Button btn = GameObject.Find("EndButton").GetComponent<Button>();
         //Debug.Log(btn);
@@ -155,7 +155,11 @@ public class GameManager : MonoBehaviour
     //}
     public void SavePlayer()
     {
-        SaveSystem.SavePlayer(this);      
+        SaveSystem.SavePlayer(this);
+        foreach (var item in BuildingList)
+        {
+            sBuildingList.Add(item);
+        }
     }
     public void LoadPlayer()
     {

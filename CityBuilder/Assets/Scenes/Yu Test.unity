@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1918887095}
         m_MethodName: LoadPlayer
         m_Mode: 1
         m_Arguments:
@@ -1678,7 +1678,7 @@ PrefabInstance:
     - target: {fileID: 385524400659464661, guid: bdd0458deeb275e44835f5e33a223a80,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd0458deeb275e44835f5e33a223a80, type: 3}
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1918887095}
         m_MethodName: SavePlayer
         m_Mode: 1
         m_Arguments:

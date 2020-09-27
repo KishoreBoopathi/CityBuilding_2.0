@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4390639552895215289}
   - component: {fileID: 4390639552895215288}
   - component: {fileID: 4390639552895215291}
-  - component: {fileID: 4390639552895215290}
   - component: {fileID: 3564426158418299962}
   m_Layer: 0
   m_Name: Final_Enemy
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4390639552895215293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.84, y: -2.37, z: 0}
+  m_LocalPosition: {x: -1.84, y: -2.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -930205833
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 4343197829040713037, guid: 78058f6cf10afc64fa27ba7f70070412,
     type: 3}
@@ -172,32 +171,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4060767, y: 1.5511799}
   m_EdgeRadius: 0
---- !u!61 &4390639552895215290
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4390639552895215293}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.49156666}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.102356}
-  m_EdgeRadius: 0
 --- !u!114 &3564426158418299962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,5 +183,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c90018f620c945419477e1f44d77096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  Items: []
+  health: 10
+  currentHealth: 0
+  Items:
+  - {fileID: 8655030697955991611, guid: add1a8d264caecb4aa444d4dc5f45994, type: 3}
+  - {fileID: 6695614850712745705, guid: 7d2bb7dc9fb44e54a886ba88f9249afd, type: 3}
+  - {fileID: 3720908641511187670, guid: 6215157564e410a479edef78610317cc, type: 3}
+  - {fileID: 206151586170178480, guid: b4fd7870c2fffc34d8cd7c4a7dd051c4, type: 3}
+  - {fileID: 6608267830051768291, guid: 4c6433ddec30914409ab40b09c082906, type: 3}
+  - {fileID: 6298537110410666065, guid: 2e8efdc12a0d5e74a9ae2d55d02b1055, type: 3}
+  - {fileID: 4329460784779054170, guid: ba07c1963bc69bb44883bd2e35519d38, type: 3}
+  - {fileID: 4368857896234359742, guid: eac9397ae44e9fc4580609ce0e8a3c0d, type: 3}
+  - {fileID: 8975416786829321286, guid: b1830e931bcc46f4bb928a2d6794cc1f, type: 3}
+  - {fileID: 1819453535216437919, guid: 8555962de5c294e49ae27e03a9a424ee, type: 3}

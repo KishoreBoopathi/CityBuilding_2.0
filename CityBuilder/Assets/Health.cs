@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class Health : MonoBehaviour
     public GameObject[] Items;
     int rand;
     bool isPlayer;
+    GameObject enemy;
+    public Text healthUI;
     // Start is called before the first frame update
     void Start()
     {
+        
         currentHealth = health;
         if(gameObject.tag == "Player")
         {
@@ -33,10 +37,13 @@ public class Health : MonoBehaviour
                 TakeDamage(20);
             }
         }
+        if(gameObject.tag == "Player")
+        {
+            healthUI.text = currentHealth.ToString("f0") + "/100";
+        }
         
         
     }
-
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
@@ -47,10 +54,11 @@ public class Health : MonoBehaviour
             {
                 Debug.Log("Player is dead");
                 gameObject.GetComponent<Movement>().enabled = false;
+                Destroy(gameObject);
             }
             else if (gameObject.tag == "Enemy")
             {
-                Debug.Log("Player is dead");
+                Debug.Log("Enemy is dead");
                 ItemDrop();
             }
             if (gameObject.tag == "Ally")
