@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class Health : MonoBehaviour
             {
                 Debug.Log("Player is dead");
                 gameObject.GetComponent<Movement>().enabled = false;
-                Destroy(gameObject);
+                SceneManager.LoadScene(FindObjectOfType<Player_Stats>().BDungeon);
             }
             else if (gameObject.tag == "Enemy")
             {
