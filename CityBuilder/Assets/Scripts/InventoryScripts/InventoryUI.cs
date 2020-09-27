@@ -14,7 +14,7 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*PlayerStats.SetActive(isPlayer);*/
+        PlayerStats.SetActive(isPlayer);
         inventory = Inventory.instance;
         inventory.onResourceChangedCallback += UpdateUI;
 
@@ -28,11 +28,11 @@ public class InventoryUI : MonoBehaviour
         {
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
-        /*if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.Y))
         {
             isPlayer = !isPlayer;
             PlayerStats.SetActive(isPlayer);
-        }*/
+        }
     }
 
     void UpdateUI()
