@@ -11,12 +11,14 @@ public class EnemyAI : MonoBehaviour
     public Vector2 movement;
     public Collider2D col;
     public Animator animator;
+    
     // Start is called before the first frame update
 
 
     // Update is called once per frame
     void Update()
     {
+        if(player == null) { return; }
         Vector2 dir = (Vector2)player.position - rb.position;
         if(animator != null)
         {
@@ -29,13 +31,14 @@ public class EnemyAI : MonoBehaviour
                 animator.SetFloat("Horizontal", 1f);
             }
         }
-        
-        
         movement = dir.normalized;
     }
     void FixedUpdate()
     {
-        Movement(movement);
+        
+            Movement(movement);
+        
+        
         
 
     }
