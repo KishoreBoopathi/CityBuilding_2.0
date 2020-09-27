@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Resource
-  - Enemy
-  - Building
-  - Terrain
-  - Rooms
-  - SpawnPoint
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -47,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Enemies
+    uniqueID: 541316039
+    locked: 0
   - name: Player
-    uniqueID: 801121223
+    uniqueID: 1213975183
     locked: 0

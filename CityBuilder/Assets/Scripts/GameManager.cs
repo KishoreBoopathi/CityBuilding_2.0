@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class GameManager : MonoBehaviour
     public float WoodMod;
     public float StoneMod;
     public float FoodMod;
-    public float Harvesters;
+    public float Harvesters = 1;
     public Text Harv;
     [Header("Player Resources")]
     public int Wood;
@@ -34,12 +35,17 @@ public class GameManager : MonoBehaviour
     List<bData> sBuildingList;
     public void Start()
     {
+        TextValues();
         UpdateRes();
         Harv.text = "Labor Left: " + Harvesters.ToString();
         string path = Application.persistentDataPath + "/player.data";
         Debug.Log(path);
         BuildingList = new List<bData>();
         sBuildingList = new List<bData>();
+
+        //Button btn = GameObject.Find("EndButton").GetComponent<Button>();
+        //Debug.Log(btn);
+        //btn.onClick.AddListener(EndTurn);
     }
     public void EndTurn()
     {
@@ -55,7 +61,7 @@ public class GameManager : MonoBehaviour
                     HPoint.HarvHere--;
                 }
                 HPoint.Harvested = false;
-                UpdateRes();
+                TextValues();
             }
         }
         foreach (Building Built in FindObjectsOfType<Building>())
@@ -69,6 +75,7 @@ public class GameManager : MonoBehaviour
         BuildingInfo BI = FindObjectOfType<BuildingInfo>();
         if (BI != null) 
             BI.SetData();
+
         Harv.text = "Labor Left: " + Harvesters.ToString();
         TurnEnded = false;
     }
@@ -149,7 +156,10 @@ public class GameManager : MonoBehaviour
     public void SavePlayer()
     {
         SaveSystem.SavePlayer(this);
-       
+        foreach (var item in BuildingList)
+        {
+            sBuildingList.Add(item);
+        }
     }
     public void LoadPlayer()
     {
@@ -199,5 +209,21 @@ public class GameManager : MonoBehaviour
         BuildingList.Add(data);
     }
 
+    public void TextValues()
+    {
+        if (WText == null)
+        {
+            WText = GameObject.Find("WoodText").GetComponent<Text>();
+        }
+        if (SText == null)
+        {
+            SText = GameObject.Find("StoneText").GetComponent<Text>();
+        }
+        if (Harv == null)
+        {
+            Harv = GameObject.Find("HarvestorText").GetComponent<Text>();
+        }
+        UpdateRes();
+    }
 }
 

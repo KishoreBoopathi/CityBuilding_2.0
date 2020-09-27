@@ -10,7 +10,7 @@ public class chest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(FindObjectOfType<Player_Stats>().BDungeon);
         }
     }
 }
