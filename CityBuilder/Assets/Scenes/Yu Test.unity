@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1918887095}
         m_MethodName: LoadPlayer
         m_Mode: 1
         m_Arguments:
@@ -1840,7 +1840,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1918887095}
         m_MethodName: SavePlayer
         m_Mode: 1
         m_Arguments:
@@ -2723,6 +2723,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046382633152088092, guid: 88797d44a0b8cdf4b95b45ab1ac8100a,
+        type: 3}
+      propertyPath: Wood
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 4046382633152088092, guid: 88797d44a0b8cdf4b95b45ab1ac8100a,
+        type: 3}
+      propertyPath: Stone
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 4046382633152088093, guid: 88797d44a0b8cdf4b95b45ab1ac8100a,
         type: 3}
