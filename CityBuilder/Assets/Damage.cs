@@ -14,5 +14,5 @@ public class Damage : MonoBehaviour
             health.TakeDamage(damage);
         }
     }
-}
+
 }
