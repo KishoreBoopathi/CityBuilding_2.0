@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourcesParent: {fileID: 9219114761546987766}
   inventoryUI: {fileID: 9219114761728891429}
-  PlayerStats: {fileID: 0}
+  PlayerStats: {fileID: 6602316162260184324}
 --- !u!1 &9076446298019206631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2637,12 @@ PrefabInstance:
 --- !u!224 &4920474777545023652 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4920474778246213708, guid: 90745861bd70f5048b317c7b0cc4bc38,
+    type: 3}
+  m_PrefabInstance: {fileID: 980766952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6602316162260184324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6602316161820655084, guid: 90745861bd70f5048b317c7b0cc4bc38,
     type: 3}
   m_PrefabInstance: {fileID: 980766952}
   m_PrefabAsset: {fileID: 0}
