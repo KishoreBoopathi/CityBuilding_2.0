@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     public Vector2 movement;
     public Collider2D col;
     public Animator animator;
+    public float maxDist = 5f;
     
     // Start is called before the first frame update
 
@@ -35,8 +36,11 @@ public class EnemyAI : MonoBehaviour
     }
     void FixedUpdate()
     {
-        
+        if(Vector2.Distance(rb.position, (Vector2)player.position)<= maxDist)
+        {
             Movement(movement);
+        }
+            
         
         
         
