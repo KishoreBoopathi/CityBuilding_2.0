@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hybrid
   m_EditorClassIdentifier: 
   Name: Hybrid
-  Model: {fileID: 7392826293301394389, guid: 732dd3791b9b90743b7bc46f16898de5, type: 3}
+  Model: {fileID: 7499948439918935659, guid: 8a17f85f920596f459cdcdcd87ab322e, type: 3}
   Description: Buildings that gives two resources
   StonePrice: 3
   WoodPrice: 4

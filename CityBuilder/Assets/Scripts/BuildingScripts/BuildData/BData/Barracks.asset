@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Barracks
   m_EditorClassIdentifier: 
   Name: Barracks
-  Model: {fileID: 5179435346823250175, guid: bedfd689344c6e14fb6f43a5d4dbed9b, type: 3}
+  Model: {fileID: 832723176760725906, guid: b14affedf6f193948ad4c1258a79156e, type: 3}
   Description: This Building will give the players an allie in the dungeon(Maximum
     = 2)
   StonePrice: 5
